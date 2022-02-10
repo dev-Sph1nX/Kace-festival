@@ -1,0 +1,12 @@
+# Tous les User-agent : googlebot, bingbot...
+User-agent: *
+
+# Autorisation par défaut d'indexer toutes les pages
+Allow: /
+
+# Interdiction de visiter et d'indexer les dossiers contenant les images et le CSS
+Disallow: /images
+Disallow: /style
+Disallow: /js
+
+Sitemap: http://iutannecy-deptinfo.fr/m1106/Kace/sitemap.xml

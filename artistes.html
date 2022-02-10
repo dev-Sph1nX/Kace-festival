@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistes</title>
+    <link rel="stylesheet" type="text/css" href="style/artistes.css"/>
+    <link rel="stylesheet" type="text/css" href="style/headerFooter.css"/>
+
+
+    <link rel="icon" href="images/icon.png"/>
+    <meta name="author" content="Loan AUBRY ; Mathieu CHEVALIER ; Axel DUVERDIER ; Thomas FLEURY ; Tom LEBRUN ; Lucas LEPERLIER">
+    <meta name="description" content="Présentation des artistes participant au festival">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .swiper-pagination-bullet-active {
+            background-color: #f96332;
+        }
+
+        .swiper-button-next, .swiper-button-prev{
+            color: #f96332;
+            text-shadow: 0px 0px 2px rgb(27, 27, 27);
+        }
+
+    </style>
+</head>
+<body>
+    <header id="top">
+        <nav class="menu">
+            <ul>
+                <li><a href="tarifs.html">Réservation</a></li>
+                <li><a href="planning.html">Planning</a></li>
+				<li> <a href="index.php"><img id="menu-img" src="images/Logo_Kace_Dark.png"></a> </li>
+                <li><a href="artistes.html">Artistes</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div> <a href="#top"><img id="divTop" src="images/newArrowUpColor.png"></a> </div>
+
+    <section class="artiste-intro">
+        <h1 class="artiste-titre">Artistes</h1>
+        <h3 class="artiste-texte">
+            Découvrez les artistes qui vont vous faire passer une semaine inoubliable
+        </h3>
+            <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide img-slide1"><img src="images/dj_snack.png" alt="DJ snack" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/dj-snack.html">
+                            <div class="text-swiper">DJ Snack</div>
+                        </a> 
+                    </div>
+                </div>
+                <div class="swiper-slide"><img src="images/bob_morley.png" alt="Bob Morley" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/bob-morley.html">
+                            <div class="text-swiper">Bob Morley</div>
+                        </a> 
+                    </div>
+                </div>
+                <div class="swiper-slide"><img src="images/david_guetto.png" alt="David Guetto" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/david-guetto.html">
+                            <div class="text-swiper">David Guetto</div>
+                        </a> 
+                    </div>
+                </div>
+                <div class="swiper-slide"><img src="images/kendji_girafe.jpg" alt="Kendji Girafe" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/kendji-girafe.html">
+                            <div class="text-swiper">Kendji Girafe</div>
+                        </a> 
+                    </div>
+                </div>
+                <div class="swiper-slide"><img src="images/petite_biscotte.png" alt="Petite Biscotte" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/petite-biscotte.html">
+                            <div class="text-swiper">Petite Biscotte</div>
+                        </a> 
+                    </div>
+                </div>
+                <div class="swiper-slide"><img src="images/dark_punk.png" alt="Dark Punk" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/dark-punk.html">
+                            <div class="text-swiper">Dark Punk</div>
+                        </a> 
+                    </div>
+                </div>
+                <div class="swiper-slide"><img src="images/coeur_de_flibustier.png" alt="Coeur de flibustier" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/coeur-de-flibustier.html">
+                            <div class="text-swiper">Coeur de flibustier</div>
+                        </a> 
+                    </div>
+                </div>
+                <div class="swiper-slide"><img src="images/corleone_gele.jpg" alt="Corleone gelé" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/corleone-gele.html">
+                            <div class="text-swiper">Corleone Gelé</div>
+                        </a> 
+                    </div>
+                </div>
+                <div class="swiper-slide"><img src="images/pln.jpg" alt="PLN" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/pln.html">
+                            <div class="text-swiper">PLN</div>
+                        </a> 
+                    </div>
+                </div>
+                <div class="swiper-slide"><img src="images/pims.png" alt="Pims" class="img-swiper">
+                    <div class="overlay">
+                        <a href="artistes/pims.html">
+                            <div class="text-swiper">PIMS</div>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Initialisation Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+    </script>
+
+    <hr class="barre-orange">
+
+    <section class="artistes-list">
+
+        <!-- affichage coté gauche -->
+        <div class="artistes-box">
+            <div class="artistes-img">
+                <img class="artistes-img-left" src="images/dj_snack.png" alt="DJ Snack">
+            </div>
+            <div class="artistes-desc">
+                <h2 class="artistes-left-titre">DJ Snack</h2>
+                <p><img class="barre-gauche" src="images/barre_orange.png"></p>
+                <p class="artistes-left-text"><a href="artistes/dj-snack.html" class="artistes-link">En savoir plus...</a></p>
+            </div>   
+        </div>
+         
+        <!-- affichage coté droit    -->
+        <div class="artistes-box">
+            <div class="artistes-desc-right">
+                <h2 class="artistes-right-titre">Bob Morley</h2>
+                <p><img class="barre-droite" src="images/barre_orange.png"></p>
+                <p class="artistes-right-text"><a href="artistes/bob-morley.html" class="artistes-link">En savoir plus...</a></p>
+            </div>
+            <div class="artistes-img">
+                <img class="artistes-img-right" src="images/bob_morley.png" alt="Bob Morley">
+            </div>     
+        </div>
+        
+        <!-- affichage coté gauche -->
+        <div class="artistes-box">
+            <div class="artistes-img">
+                <img class="artistes-img-left" src="images/david_guetto.png" alt="David Guetto">
+            </div>
+            <div class="artistes-desc">
+                <h2 class="artistes-left-titre">David Guetto</h2>
+                <p><img class="barre-gauche" src="images/barre_orange.png"></p>
+                <p class="artistes-left-text"><a href="artistes/david-guetto.html" class="artistes-link">En savoir plus...</a></p>
+            </div>   
+        </div>
+
+        <!-- affichage coté droit    -->
+        <div class="artistes-box">
+            <div class="artistes-desc-right">
+                <h2 class="artistes-right-titre">Kendji Girafe</h2>
+                <p><img class="barre-droite" src="images/barre_orange.png"></p>
+                <p class="artistes-right-text"><a href="artistes/kendji-girafe.html" class="artistes-link">En savoir plus...</a></p>
+            </div>
+            <div class="artistes-img">
+                <img class="artistes-img-right" src="images/kendji_girafe.jpg" alt="Kendji Girafe">
+            </div>     
+        </div>
+
+        <!-- affichage coté gauche -->
+        <div class="artistes-box">
+            <div class="artistes-img">
+                <img class="artistes-img-left" src="images/petite_biscotte.png" alt="Petite Biscotte">
+            </div>
+            <div class="artistes-desc">
+                <h2 class="artistes-left-titre">Petite Biscotte</h2>
+                <p><img class="barre-gauche" src="images/barre_orange.png"></p>
+                <p class="artistes-left-text"><a href="artistes/petite-biscotte.html" class="artistes-link">En savoir plus...</a></p>
+            </div>   
+        </div>
+
+        <!-- affichage coté droit    -->
+        <div class="artistes-box">
+            <div class="artistes-desc-right">
+                <h2 class="artistes-right-titre">Dark Punk</h2>
+                <p><img class="barre-droite" src="images/barre_orange.png"></p>
+                <p class="artistes-right-text"><a href="artistes/dark-punk.html" class="artistes-link">En savoir plus...</a></p>
+            </div>
+            <div class="artistes-img">
+                <img class="artistes-img-right" src="images/dark_punk.png" alt="Dark Punk">
+            </div>     
+        </div>
+
+        <!-- affichage coté gauche -->
+        <div class="artistes-box">
+            <div class="artistes-img">
+                <img class="artistes-img-left" src="images/coeur_de_flibustier.png" alt="Coeur de flibustier">
+            </div>
+            <div class="artistes-desc">
+                <h2 class="artistes-left-titre">Coeur de flibustier</h2>
+                <p><img class="barre-gauche" src="images/barre_orange.png"></p>
+                <p class="artistes-left-text"><a href="artistes/coeur-de-flibustier.html" class="artistes-link">En savoir plus...</a></p>
+            </div>   
+        </div>
+
+        <!-- affichage coté droit    -->
+        <div class="artistes-box">
+            <div class="artistes-desc-right">
+                <h2 class="artistes-right-titre">Corleone Gelé</h2>
+                <p><img class="barre-droite" src="images/barre_orange.png"></p>
+                <p class="artistes-right-text"><a href="artistes/corleone-gele.html" class="artistes-link">En savoir plus...</a></p>
+            </div>
+            <div class="artistes-img">
+                <img class="artistes-img-right" src="images/corleone_gele.jpg" alt="Corleone Gelé">
+            </div>     
+        </div>
+
+        <!-- affichage coté gauche -->
+        <div class="artistes-box">
+            <div class="artistes-img">
+                <img class="artistes-img-left" src="images/pln.jpg" alt="PLN">
+            </div>
+            <div class="artistes-desc">
+                <h2 class="artistes-left-titre">PLN</h2>
+                <p><img class="barre-gauche" src="images/barre_orange.png"></p>
+                <p class="artistes-left-text"><a href="artistes/pln.html" class="artistes-link">En savoir plus...</a></p>
+            </div>   
+        </div>
+
+        <!-- affichage coté droit    -->
+        <div class="artistes-box">
+            <div class="artistes-desc-right">
+                <h2 class="artistes-right-titre">PIMS</h2>
+                <p><img class="barre-droite" src="images/barre_orange.png"></p>
+                <p class="artistes-right-text"><a href="artistes/pims.html" class="artistes-link">En savoir plus...</a></p>
+            </div>
+            <div class="artistes-img">
+                <img class="artistes-img-right" src="images/pims.png" alt="PIMS">
+            </div>     
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy KACE Festival Tous droits réservés</p>
+        <a href="#"><img src="images/logo_kace_dark_square.png" alt="Logo Kace"></a>
+    </footer>
+</body>
+</html>
